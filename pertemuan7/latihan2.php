@@ -22,12 +22,12 @@ if (
 </head>
 <body>
     <ul>
-        <li><img src="img/<?= $_GET["gambar"];?>" alt="novel picture"></li>
-        <li><?= $_GET["judul"];?></li>
-        <li><?= $_GET["pengarang"];?></li>
-        <li><?= $_GET["penerbit"];?></li>
-        <li><?= $_GET["tahun_terbit"];?></li>
-        <li><?= $_GET["halaman"];?></li>
+        <img src="img/<?= $_GET["gambar"];?>" alt="novel picture">
+        <li>Judul: <?= $_GET["judul"];?></li>
+        <li>Pengarang: <?= $_GET["pengarang"];?></li>
+        <li>Penerbiy: <?= $_GET["penerbit"];?></li>
+        <li>Tahun Terbit: <?= $_GET["tahun_terbit"];?></li>
+        <li>Jumlah Halaman<?= $_GET["halaman"];?></li>
     </ul>
     <a href="latihan1.php">Kembali ke Daftar Novel</a>
 </body>
