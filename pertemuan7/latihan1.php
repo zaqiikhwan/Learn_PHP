@@ -41,7 +41,7 @@ $novels = [
         "penerbit" => "Gramedia Pustaka Utama",
         "tahun_terbit" => "2018",
         "halaman" => "392 Halaman",
-        "gambar" => "cerosdanbatazoar.jpg"
+        "gambar" => "ceros.jpg"
     ],
     [
         "judul" => "Komet",
