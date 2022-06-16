@@ -99,6 +99,14 @@ $novels = [
         "halaman" => "368 Halaman",
         "gambar" => "bibigili.jpeg"
     ],
+    [
+        "judul" => "Sagaras",
+        "pengarang" => "Tere Liye",
+        "penerbit" => "Gramedia Pustaka Utama",
+        "tahun_terbit" => "2022",
+        "halaman" => "384 Halaman",
+        "gambar" => "sagaras.jpeg"
+    ]
 ];
 // var_dump($_GET);
 // Vaariable scope / lingkup variabel
