@@ -58,33 +58,45 @@ if( isset($_POST["login"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
     <title>Halaman Login</title>
 </head>
 <body>
-    <h1>Halaman Login</h1>
 
-    <?php if (isset($error)) : ?>
-        <p style="color: red; font-style: italic">username atau password salah</p>
-    <?php endif; ?>
+    <main>
+        <div class="container">
+            <h1>Halaman Login</h1>
+            <?php if (isset($error)) : ?>
+                <p style="color: white; font-style: italic; position:absolute; margin-left:72px; padding:0; margin-top:172px;">username atau password salah</p>
+            <?php endif; ?>
+    
+            <form action="" method="post" class="input-data">
+                <ul>
+                    <li class="uname">
+                        <h4>
+                            <label for="username">Username:</label>
+                            <input type="text" name="username" id="username" class="input-username">
+                        </h4>
+                    </li>
+                    <li class="pw">
+                        <h4>
+                            <label for="password">Password :</label>
+                            <input type="password" name="password" id="password" class="input-password">
+                        </h4>
+                    </li>
+                    <li class="remember">
+                        <input type="checkbox" name="remember" id="remember">
+                        <label for="remember">Remember me</label>
+                    </li>
+                    <li>
+                        <button class="login" type="submit" name="login">Login</button>
+                    </li>
+                </ul>
+            </form>        
+            <img class="bg-image" src="/assets/bg-login.jpg" alt="" srcset="" >
+        </div>
 
-    <form action="" method="post">
-        <ul>
-            <li>
-                <label for="username">Username: </label>
-                <input type="text" name="username" id="username">
-            </li>
-            <li>
-                <label for="password">Password: </label>
-                <input type="password" name="password" id="password">
-            </li>
-            <li>
-                <input type="checkbox" name="remember" id="remember">
-                <label for="remember">Remember me</label>
-            </li>
-            <li>
-                <button type="submit" name="login">Login</button>
-            </li>
-        </ul>
-    </form>
+    </main>
+
 </body>
 </html>
