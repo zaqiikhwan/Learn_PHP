@@ -22,16 +22,19 @@ if (isset($_SESSION["login"])) {
     exit;
 }
 
-if( isset($_POST["login"])) {
+if(isset($_POST["login"])) {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
+    // untuk melakukan query user yang memiliki username dengan yang diinputkan
     $result = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
     // cek username
     if (mysqli_num_rows($result) === 1) {
         // cek passwordnya
         $row = mysqli_fetch_assoc($result);
 
+        // untuk mengecek apakah hash dari password yang diinputkan user 
+        // sesuai dengan hash password yang disimpan di database.
         if (password_verify($password, $row["password"])) {
             // set session
             $_SESSION["login"] = true;
